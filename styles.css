@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+
 body {
   background-color: #fdf5e6;
   color: rgb(0, 73, 51);
@@ -11,6 +12,7 @@ body {
 
   font: bold 16px "Roboto", sans-serif;
 }
+
 
 a {
   color: rgb(0, 73, 51);
@@ -43,6 +45,8 @@ abbr {
 }
 
 .info-text {
+    display: flex;
+    flex-direction: column;
   margin-left: 25px;
   background-color: aqua;
   padding: 15px 20px;
@@ -52,6 +56,17 @@ abbr {
   box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.445);
   margin-bottom: 20px;
 }
+
+.soc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    height: 100%;
+    
+    
+}
+
 
 .info {
 
@@ -64,39 +79,24 @@ abbr {
     
 }
 
-@media (max-width:700px) {
-    .info {
+/* @media (max-width:700px) {
+    .info  {
         text-align: center;
         display:block;
-        
+        width: 100%;
 
     }
-}
-@media (max-width:700px) {
-    #avatar {
-        text-align: center;
-        display:block;
-        
+} */
 
-    }
-}
 
-@media (max-width:700px) {
-    .info-text {       
-        margin-left: 0;
-        
-        
-    }
-}
-
-@media (max-width:700px) {
+/* @media (max-width:700px) {
     .card {
         text-align: center;
-        display:block;
+        display:block ;
         
 
     }
-}
+} */
 
 .container {
   max-width: 750px;
@@ -126,11 +126,15 @@ abbr {
 }
 
 .bg-green {
-  background-color: rgb(148, 236, 122);
-  display: flex;
-  justify-content:space-around;
+    background-color: rgb(148, 236, 122);
+    display: flex;
+    justify-content:space-around;
+    text-align: center; 
+  
+  }
 
-}
+
+
 
 .bg-red {
   background-color: rgb(233, 99, 99);
@@ -173,14 +177,14 @@ color: red;
 } */
 
 .link-list {
-  list-style: square;
+  list-style: none;
   padding: 0;
 }
 
 .link-list li {
   margin-bottom: 10px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #2d4e41;; */
 }
 
 .contact h2 {
@@ -206,9 +210,23 @@ color: red;
   font-family: inherit;
 }
 
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ align-items: stretch;
+ 
+}
 .row {
   display: flex;
   margin-bottom: 20px;
+
+}
+
+.pusk {
+    display: flex;
+    justify-content: center;
+    
 }
 
 .row > .form-group {
@@ -220,13 +238,25 @@ color: red;
   margin-right: 20px;
 }
 
+
+
+
 .btn {
-  background-color: black;
+  background-color: #e96363;
   padding: 15px 20px;
   color: white;
   border: none;
   font-family: inherit;
   cursor: pointer;
+  width: 100%;
+  
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse; */
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
 }
 
 .btn:hover {
@@ -252,4 +282,22 @@ color: red;
   height: 50px;
   background: lightcoral;
 } */
+
+@media (max-width:700px) {
+    #avatar {
+        text-align: center;
+        display:block;
+        
+
+    }
+}
+
+@media (max-width:700px) {
+    .info-text, .card,.info {       
+        margin-left: 0;
+        display:block;
+        text-align: center;
+        width:auto ;        
+    }
+}
 
